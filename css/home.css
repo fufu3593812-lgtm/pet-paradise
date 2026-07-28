@@ -105,7 +105,7 @@
   line-height: 1;
 }
 
-/* === 操作按钮（胶囊，紫底白波点 / 黑底白波点 交替） === */
+/* === 操作按钮（胶囊，浅紫底白波点 / 灰黑底白波点 交替，波点不规则） === */
 .action-row {
   position: relative;
   z-index: 1;
@@ -133,18 +133,26 @@
   transform: scale(0.94);
 }
 
-/* 紫色背景 + 白色波点 */
+/* 浅紫背景 + 纯白波点（多层不规则） */
 .action-card.purple-dot {
-  background-color: #9B7FBF;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.45) 1.5px, transparent 1.5px);
-  background-size: 8px 8px;
+  background-color: #C4B4DA;
+  background-image:
+    radial-gradient(circle, #FFFFFF 1.6px, transparent 1.6px),
+    radial-gradient(circle, #FFFFFF 1.2px, transparent 1.2px),
+    radial-gradient(circle, #FFFFFF 1px, transparent 1px);
+  background-size: 12px 14px, 9px 11px, 15px 9px;
+  background-position: 0 0, 5px 6px, 3px 2px;
 }
 
-/* 黑色背景 + 白色波点 */
+/* 灰黑背景 + 纯白波点（多层不规则） */
 .action-card.dark-dot {
-  background-color: #3A3540;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.35) 1.5px, transparent 1.5px);
-  background-size: 8px 8px;
+  background-color: #5A5260;
+  background-image:
+    radial-gradient(circle, #FFFFFF 1.6px, transparent 1.6px),
+    radial-gradient(circle, #FFFFFF 1.2px, transparent 1.2px),
+    radial-gradient(circle, #FFFFFF 1px, transparent 1px);
+  background-size: 12px 14px, 9px 11px, 15px 9px;
+  background-position: 0 0, 5px 6px, 3px 2px;
 }
 
 .action-label {
