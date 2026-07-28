@@ -1,36 +1,82 @@
 /* === 孵蛋页 === */
 
-.egg-list {
+.page-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  gap: 12px;
+}
+
+.back-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  background: var(--card-bg);
+  font-size: 16px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--card-shadow);
+}
+
+.page-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.page-coin {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.page-body {
+  position: relative;
+  z-index: 1;
+  padding: 0 14px;
+}
+
+.egg-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 4px;
+  margin-bottom: 24px;
 }
 
 .egg-card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px;
-  border: 1.5px solid var(--border-color);
-  border-radius: 10px;
-  background: var(--page-bg);
+  gap: 14px;
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
 }
 
 .egg-icon {
-  font-size: 28px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  font-size: 32px;
+  width: 48px;
+  height: 48px;
   background: var(--accent-light);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px dashed var(--border-color);
 }
 
-.egg-info {
+.egg-meta {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -48,73 +94,59 @@
   color: var(--text-sub);
 }
 
-.egg-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.egg-price {
-  font-size: 11px;
-  color: var(--accent-dark);
-  font-weight: 600;
-}
-
-.egg-btn {
-  padding: 6px 14px;
-  border: 1.5px solid var(--accent);
-  border-radius: 12px;
+.egg-buy {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
   background: var(--accent-light);
   color: var(--accent-dark);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.egg-btn:active {
-  background: var(--accent);
-  color: #fff;
-  transform: scale(0.93);
-}
+.egg-buy:active { transform: scale(0.93); background: var(--accent); color: #fff; }
 
 /* 孵化中 */
-.hatching-section {
-  text-align: center;
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
 }
 
-.hatch-slot {
+.hatch-card {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px;
-  border: 1px dashed var(--border-color);
-  border-radius: 10px;
-  margin-top: 4px;
+  padding: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
 }
 
-.hatch-egg {
-  font-size: 24px;
-  animation: eggBounce 2s ease-in-out infinite;
+.hatch-emoji {
+  font-size: 28px;
+  animation: bounce 2s ease-in-out infinite;
 }
 
-@keyframes eggBounce {
+@keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-3px); }
 }
 
-.hatch-info {
+.hatch-detail {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: left;
 }
 
 .hatch-name {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text);
 }

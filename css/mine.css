@@ -1,69 +1,62 @@
 /* === 我的页 === */
 
-.user-info {
+.profile-card {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 14px;
 }
 
-.user-avatar {
-  font-size: 32px;
+.profile-avatar {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  font-size: 28px;
   background: var(--accent-light);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px dashed var(--border-color);
 }
 
-.user-detail {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.profile-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.profile-name { font-size: 16px; font-weight: 700; color: var(--text); }
+.profile-id { font-size: 11px; color: var(--text-sub); }
+.profile-coin { font-size: 13px; font-weight: 600; color: var(--accent-dark); }
+
+.mine-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 14px;
 }
 
-.user-name {
-  font-size: 16px;
+.m-title {
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
+  margin-bottom: 10px;
 }
 
-.user-id {
-  font-size: 11px;
-  color: var(--text-sub);
-}
-
-.user-coin {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--accent-dark);
-}
-
-/* 宠物列表 */
-.pet-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.pet-row {
+.m-pet-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--card-border);
 }
 
-.pet-row-icon { font-size: 22px; }
-.pet-row-name { flex: 1; font-size: 13px; font-weight: 600; color: var(--text); }
-.pet-row-lv { font-size: 11px; color: var(--text-sub); }
+.m-pet-row:last-child { border-bottom: none; }
+.m-pet-name { flex: 1; font-size: 13px; font-weight: 600; color: var(--text); }
+.m-pet-lv { font-size: 11px; color: var(--text-sub); }
 
-/* 背包 */
-.bag-grid {
+.bag-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
@@ -73,22 +66,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   padding: 10px 4px;
-  border: 1px dashed var(--border-color);
-  border-radius: 8px;
+  background: var(--accent-light);
+  border-radius: 10px;
 }
 
-.bag-cell span { font-size: 22px; }
+.bag-cell span { font-size: 20px; }
 .bag-cell small { font-size: 10px; color: var(--text-sub); font-weight: 600; }
 
-/* 主题选择 */
-.theme-dots {
+/* 主题色 */
+.color-row {
   display: flex;
   gap: 12px;
 }
 
-.t-dot {
+.c-dot {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -97,14 +90,9 @@
   transition: all 0.2s;
 }
 
-.t-dot.active {
-  border-color: var(--text);
-  box-shadow: 0 0 0 2px var(--accent-light);
-}
-
-.t-dot.pink { background: #F9D5DB; }
-.t-dot.blue { background: #C8DFF5; }
-.t-dot.mint { background: #C8F0E0; }
-.t-dot.red { background: #F5C8C8; }
-.t-dot.purple { background: #E4D0F0; }
-.t-dot.black { background: #4A4A4A; }
+.c-dot.active { border-color: var(--text); }
+.c-dot.lavender { background: #C8BED8; }
+.c-dot.rose { background: #E8B8C0; }
+.c-dot.sky { background: #B0D0E8; }
+.c-dot.sage { background: #B8D8C8; }
+.c-dot.dark { background: #4A4A4A; }

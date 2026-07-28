@@ -1,74 +1,56 @@
 /* === 论坛页 === */
 
 .new-post-btn {
-  padding: 5px 14px;
-  border: 1.5px solid var(--accent);
-  border-radius: 12px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
   background: var(--accent-light);
   color: var(--accent-dark);
   font-size: 12px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
-.new-post-btn:active {
-  background: var(--accent);
-  color: #fff;
-}
+.new-post-btn:active { background: var(--accent); color: #fff; }
 
 .post-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .post-card {
-  padding: 14px;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
 }
 
-.post-top {
+.post-head {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
 }
 
-.post-avatar {
-  font-size: 20px;
-}
+.p-avatar { font-size: 20px; }
+.p-author { font-size: 13px; font-weight: 600; color: var(--text); flex: 1; }
+.p-time { font-size: 10px; color: var(--text-sub); }
 
-.post-author {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  flex: 1;
-}
-
-.post-time {
-  font-size: 10px;
-  color: var(--text-sub);
-}
-
-.post-text {
+.p-text {
   font-size: 13px;
   line-height: 1.6;
   color: var(--text);
   margin-bottom: 10px;
 }
 
-.post-actions {
+.p-footer {
   display: flex;
   gap: 16px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-color);
-}
-
-.post-action {
   font-size: 12px;
   color: var(--text-sub);
-  cursor: pointer;
+  padding-top: 8px;
+  border-top: 1px solid var(--card-border);
 }
