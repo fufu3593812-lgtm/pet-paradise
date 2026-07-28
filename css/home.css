@@ -75,7 +75,7 @@
 
 .top-circle-btn:active { transform: scale(0.92); }
 
-/* === 宠物卡片（虚线边框，无波浪） === */
+/* === 宠物卡片（虚线边框） === */
 .outer-card {
   position: relative;
   z-index: 1;
@@ -105,18 +105,18 @@
   line-height: 1;
 }
 
-/* === 操作按钮（胶囊，浅紫底白波点 / 灰黑底白波点 交替，波点不规则） === */
+/* === 操作按钮（grid均分宽度，浅紫/灰黑底+白波点交替） === */
 .action-row {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 0 14px 14px;
 }
 
 .action-card {
-  padding: 10px 22px;
+  padding: 11px 0;
   border: none;
   border-radius: 20px;
   display: flex;
@@ -133,26 +133,24 @@
   transform: scale(0.94);
 }
 
-/* 浅紫背景 + 纯白波点（多层不规则） */
+/* 浅紫背景 + 纯白波点（大小一样，两层错位） */
 .action-card.purple-dot {
   background-color: #C4B4DA;
   background-image:
-    radial-gradient(circle, #FFFFFF 1.6px, transparent 1.6px),
-    radial-gradient(circle, #FFFFFF 1.2px, transparent 1.2px),
-    radial-gradient(circle, #FFFFFF 1px, transparent 1px);
-  background-size: 12px 14px, 9px 11px, 15px 9px;
-  background-position: 0 0, 5px 6px, 3px 2px;
+    radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px),
+    radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px);
+  background-size: 11px 11px, 11px 11px;
+  background-position: 0 0, 6px 5px;
 }
 
-/* 灰黑背景 + 纯白波点（多层不规则） */
+/* 灰黑背景 + 纯白波点（同上） */
 .action-card.dark-dot {
   background-color: #5A5260;
   background-image:
-    radial-gradient(circle, #FFFFFF 1.6px, transparent 1.6px),
-    radial-gradient(circle, #FFFFFF 1.2px, transparent 1.2px),
-    radial-gradient(circle, #FFFFFF 1px, transparent 1px);
-  background-size: 12px 14px, 9px 11px, 15px 9px;
-  background-position: 0 0, 5px 6px, 3px 2px;
+    radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px),
+    radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px);
+  background-size: 11px 11px, 11px 11px;
+  background-position: 0 0, 6px 5px;
 }
 
 .action-label {
@@ -163,7 +161,7 @@
   z-index: 1;
 }
 
-/* === 数值条（胶囊卡片，浅紫浅黑交替） === */
+/* === 数值条 === */
 .stat-section {
   position: relative;
   z-index: 1;
