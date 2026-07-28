@@ -1,21 +1,20 @@
 /* === 宠物乐园 - 基础 === */
 
 :root {
-  --bg: #F5F2F0;
-  --dot-color: #D8D2CC;
+  --bg: #FDF9F3;
+  --text: #2D2A33;
+  --text-sub: #8A8494;
   --card-bg: #FFFFFF;
-  --card-border: rgba(0,0,0,0.04);
-  --card-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  --card-border: #EDE8E3;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.04);
   --card-radius: 22px;
-  --text: #2A2A2A;
-  --text-sub: #9A9A9A;
-  --accent: #B8A5D0;
-  --accent-light: #F0ECF5;
-  --accent-dark: #7A6A90;
-  --bar-bg: #F0ECF5;
-  --bar-fill: #B8A5D0;
-  --lace-color: #E8E0E4;
-  --dock-active: #B8A5D0;
+  --accent-light: #F3EAFA;
+  --accent-dark: #7B5EA7;
+  --bar-bg: #F0ECE6;
+  --bar-purple: #9B7FBF;
+  --bar-black: #3A3540;
+  --dock-bg: rgba(255,255,255,0.92);
+  --dock-border: #EDE8E3;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,15 +33,19 @@ body {
   padding-bottom: max(80px, calc(env(safe-area-inset-bottom) + 72px));
 }
 
-/* === 波点背景 === */
+/* === 波点背景（奶白偏黄底色 + 渐变灰色波点，深浅不一） === */
 .dot-bg {
   position: fixed;
   inset: 0;
-  background-color: var(--bg);
-  background-image: radial-gradient(circle, var(--dot-color) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
+  background-color: #FDF9F3;
+  background-image:
+    radial-gradient(circle, rgba(170,158,148,0.20) 1.3px, transparent 1.3px),
+    radial-gradient(circle, rgba(130,120,112,0.12) 0.9px, transparent 0.9px),
+    radial-gradient(circle, rgba(155,145,138,0.16) 1.1px, transparent 1.1px);
+  background-size: 26px 26px, 17px 17px, 38px 38px;
+  background-position: 0 0, 8px 13px, 19px 6px;
 }
 
 /* === 卡片通用 === */
@@ -61,8 +64,8 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 430px;
-  background: var(--card-bg);
-  border-top: 1px solid var(--card-border);
+  background: var(--dock-bg);
+  border-top: 1px solid var(--dock-border);
   padding: 8px 10px;
   padding-bottom: max(8px, env(safe-area-inset-bottom));
   display: flex;
@@ -71,6 +74,7 @@ body {
   z-index: 100;
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -2px 16px rgba(0,0,0,0.03);
+  backdrop-filter: blur(12px);
 }
 
 .dock-item {
