@@ -105,20 +105,19 @@
   line-height: 1;
 }
 
-/* === 操作按钮（grid均分宽度，浅紫/灰黑底+白波点交替） === */
+/* === 操作按钮（小胶囊，间距大，浅紫/灰黑底+白波点交替） === */
 .action-row {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: space-between;
   margin: 0 14px 14px;
 }
 
 .action-card {
-  padding: 11px 0;
+  padding: 9px 24px;
   border: none;
-  border-radius: 20px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +132,7 @@
   transform: scale(0.94);
 }
 
-/* 浅紫背景 + 纯白波点（大小一样，两层错位） */
+/* 浅紫背景 + 纯白波点 */
 .action-card.purple-dot {
   background-color: #C4B4DA;
   background-image:
@@ -143,7 +142,7 @@
   background-position: 0 0, 6px 5px;
 }
 
-/* 灰黑背景 + 纯白波点（同上） */
+/* 灰黑背景 + 纯白波点 */
 .action-card.dark-dot {
   background-color: #5A5260;
   background-image:
