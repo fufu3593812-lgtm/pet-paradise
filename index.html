@@ -3,115 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Dot Diary</title>
+<title>宠物乐园</title>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/home.css">
 </head>
 <body data-theme="pink">
 
-<!-- Polka dot background -->
-<div class="dots-bg"></div>
-
-<!-- Top bar -->
-<header class="top-bar">
-  <button class="menu-btn" aria-label="菜单">☰</button>
-  <div class="top-title">• Dot Diary •</div>
-  <div class="top-currency">♥ <span id="currency">1320</span></div>
+<!-- 顶部波点区 -->
+<header class="header-area">
+  <div class="header-dots"></div>
+  <div class="header-content">
+    <span class="header-title">宠物乐园</span>
+    <span class="header-coin">💎 1320</span>
+  </div>
 </header>
+<div class="scallop-divider header-scallop"></div>
 
-<!-- Wavy divider top -->
-<div class="wave-divider top"></div>
+<!-- 主体内容 -->
+<main class="main-content">
 
-<!-- Main content -->
-<main class="home-main">
-
-  <!-- Side buttons -->
-  <aside class="side-btns">
-    <button class="side-btn" data-page="diary">
-      <span class="side-icon">📖</span>
-      <span class="side-label">Diary</span>
-    </button>
-    <button class="side-btn" data-page="event">
-      <span class="side-icon">🎁</span>
-      <span class="side-label">Event</span>
-    </button>
-    <button class="side-btn" data-page="photo">
-      <span class="side-icon">📷</span>
-      <span class="side-label">Photo</span>
-    </button>
-    <button class="side-btn" data-page="setting" onclick="location.href='setting.html'">
-      <span class="side-icon">⚙️</span>
-      <span class="side-label">Setting</span>
-    </button>
-  </aside>
-
-  <!-- Pet display area -->
-  <section class="pet-display">
-    <div class="pet-heart">♥</div>
-    <div class="pet-avatar">
-      <div class="pet-placeholder">🐩</div>
+  <!-- 宠物展示区 -->
+  <section class="pet-stage">
+    <div class="pet-frame">
+      <div class="pet-img">🐕</div>
     </div>
-    <div class="pet-cushion"></div>
+    <div class="pet-name-tag">小奶糖 · Lv.12</div>
   </section>
 
-  <!-- Status bars -->
-  <section class="status-bars">
-    <div class="status-row">
-      <span class="status-dot"></span>
-      <span class="status-label">Mood</span>
-      <div class="status-track"><div class="status-fill" style="width:80%"></div></div>
-      <span class="status-value">80/100</span>
+  <!-- 状态条 -->
+  <section class="status-card">
+    <div class="status-item">
+      <span class="status-label">心情</span>
+      <div class="status-bar"><div class="status-fill" style="width:80%"></div></div>
+      <span class="status-num">80</span>
     </div>
-    <div class="status-row">
-      <span class="status-dot"></span>
-      <span class="status-label">Hunger</span>
-      <div class="status-track"><div class="status-fill" style="width:60%"></div></div>
-      <span class="status-value">60/100</span>
+    <div class="status-item">
+      <span class="status-label">饱食</span>
+      <div class="status-bar"><div class="status-fill" style="width:60%"></div></div>
+      <span class="status-num">60</span>
     </div>
-    <div class="status-row">
-      <span class="status-dot"></span>
-      <span class="status-label">Clean</span>
-      <div class="status-track"><div class="status-fill" style="width:70%"></div></div>
-      <span class="status-value">70/100</span>
+    <div class="status-item">
+      <span class="status-label">清洁</span>
+      <div class="status-bar"><div class="status-fill" style="width:45%"></div></div>
+      <span class="status-num">45</span>
     </div>
   </section>
 
-  <!-- Action buttons -->
-  <section class="action-btns">
-    <button class="action-btn"><span class="action-dot"></span>Feed</button>
-    <button class="action-btn"><span class="action-dot"></span>Play</button>
-    <button class="action-btn"><span class="action-dot"></span>Sleep</button>
+  <!-- 互动按钮 -->
+  <section class="action-row">
+    <button class="action-btn">🍖 喂食</button>
+    <button class="action-btn">🎾 玩耍</button>
+    <button class="action-btn">🛁 洗澡</button>
+    <button class="action-btn">😴 休息</button>
   </section>
 
 </main>
 
-<!-- Bottom dock -->
+<!-- 底部波浪 + dock -->
+<div class="scallop-divider dock-scallop"></div>
 <nav class="dock">
-  <a href="index.html" class="dock-item active">
-    <span class="dock-icon">🏠</span>
-    <span class="dock-dot"></span>
-    <span class="dock-label">Home</span>
-  </a>
-  <a href="pet.html" class="dock-item">
-    <span class="dock-icon">🐾</span>
-    <span class="dock-dot"></span>
-    <span class="dock-label">Pet</span>
-  </a>
-  <a href="shop.html" class="dock-item">
-    <span class="dock-icon">🛍️</span>
-    <span class="dock-dot"></span>
-    <span class="dock-label">Shop</span>
-  </a>
-  <a href="bag.html" class="dock-item">
-    <span class="dock-icon">👜</span>
-    <span class="dock-dot"></span>
-    <span class="dock-label">Bag</span>
-  </a>
-  <a href="mine.html" class="dock-item">
-    <span class="dock-icon">😊</span>
-    <span class="dock-dot"></span>
-    <span class="dock-label">Mine</span>
-  </a>
+  <div class="dock-dots"></div>
+  <a href="index.html" class="dock-item active"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
+  <a href="hatch.html" class="dock-item"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
+  <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">论坛</span></a>
+  <a href="shop.html" class="dock-item"><span class="dock-icon">🛍️</span><span class="dock-label">商店</span></a>
+  <a href="mine.html" class="dock-item"><span class="dock-icon">😊</span><span class="dock-label">我的</span></a>
 </nav>
 
 <script src="js/theme.js"></script>

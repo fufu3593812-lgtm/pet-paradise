@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>我的 - 宠物乐园</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/mine.css">
+</head>
+<body data-theme="pink">
+
+<header class="header-area">
+  <div class="header-dots"></div>
+  <div class="header-content">
+    <span class="header-title">我的</span>
+  </div>
+</header>
+<div class="scallop-divider header-scallop"></div>
+
+<main class="main-content">
+
+  <!-- 用户信息 -->
+  <section class="user-card">
+    <div class="user-avatar">😊</div>
+    <div class="user-info">
+      <span class="user-name">服服</span>
+      <span class="user-id">ID: 001</span>
+    </div>
+    <div class="user-coin">💎 1320</div>
+  </section>
+
+  <!-- 我的宠物 -->
+  <section class="mine-section">
+    <h3 class="section-title">我的宠物</h3>
+    <div class="my-pets">
+      <div class="my-pet-item">
+        <span class="my-pet-img">🐕</span>
+        <span class="my-pet-name">小奶糖</span>
+        <span class="my-pet-lv">Lv.12</span>
+      </div>
+      <div class="my-pet-item">
+        <span class="my-pet-img">🐱</span>
+        <span class="my-pet-name">咪咪</span>
+        <span class="my-pet-lv">Lv.5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 背包 -->
+  <section class="mine-section">
+    <h3 class="section-title">背包</h3>
+    <div class="bag-grid">
+      <div class="bag-item"><span class="bag-icon">🍖</span><span class="bag-count">x12</span></div>
+      <div class="bag-item"><span class="bag-icon">🥛</span><span class="bag-count">x8</span></div>
+      <div class="bag-item"><span class="bag-icon">🎾</span><span class="bag-count">x5</span></div>
+      <div class="bag-item"><span class="bag-icon">🎀</span><span class="bag-count">x3</span></div>
+      <div class="bag-item"><span class="bag-icon">🧴</span><span class="bag-count">x6</span></div>
+    </div>
+  </section>
+
+  <!-- 设置 -->
+  <section class="mine-section">
+    <h3 class="section-title">主题</h3>
+    <div class="theme-picker">
+      <button class="theme-dot pink active" data-theme="pink"></button>
+      <button class="theme-dot blue" data-theme="blue"></button>
+      <button class="theme-dot mint" data-theme="mint"></button>
+      <button class="theme-dot red" data-theme="red"></button>
+      <button class="theme-dot purple" data-theme="purple"></button>
+      <button class="theme-dot black" data-theme="black"></button>
+    </div>
+  </section>
+
+</main>
+
+<div class="scallop-divider dock-scallop"></div>
+<nav class="dock">
+  <div class="dock-dots"></div>
+  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
+  <a href="hatch.html" class="dock-item"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
+  <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">论坛</span></a>
+  <a href="shop.html" class="dock-item"><span class="dock-icon">🛍️</span><span class="dock-label">商店</span></a>
+  <a href="mine.html" class="dock-item active"><span class="dock-icon">😊</span><span class="dock-label">我的</span></a>
+</nav>
+
+<script src="js/theme.js"></script>
+<script src="js/setting.js"></script>
+</body>
+</html>

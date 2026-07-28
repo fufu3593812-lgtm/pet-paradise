@@ -1,6 +1,5 @@
-// Setting page interactions
+// 主题选择交互
 (function() {
-  // Theme dot click
   document.querySelectorAll('.theme-dot').forEach(function(dot) {
     dot.addEventListener('click', function() {
       var theme = this.getAttribute('data-theme');
@@ -8,7 +7,7 @@
     });
   });
 
-  // Mark current theme dot as active on load
+  // 初始标记当前主题
   var current = document.body.getAttribute('data-theme') || 'pink';
   document.querySelectorAll('.theme-dot').forEach(function(el) {
     el.classList.toggle('active', el.getAttribute('data-theme') === current);
