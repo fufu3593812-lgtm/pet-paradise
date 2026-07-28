@@ -81,7 +81,7 @@
   z-index: 1;
   margin: 0 14px 14px;
   padding: 4px;
-  border: 1.5px dashed #C4B0D4;
+  border: 1.5px dashed var(--dashed-border);
   border-radius: 28px;
   background: transparent;
 }
@@ -105,7 +105,7 @@
   line-height: 1;
 }
 
-/* === 操作按钮（小胶囊，往里收） === */
+/* === 操作按钮 === */
 .action-row {
   position: relative;
   z-index: 1;
@@ -132,9 +132,9 @@
   transform: scale(0.94);
 }
 
-/* 浅紫背景 + 纯白波点 */
+/* 主色按钮 + 白波点 */
 .action-card.purple-dot {
-  background-color: #C4B4DA;
+  background-color: var(--btn-purple);
   background-image:
     radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px),
     radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px);
@@ -142,9 +142,9 @@
   background-position: 0 0, 6px 5px;
 }
 
-/* 灰黑背景 + 纯白波点 */
+/* 深色按钮 + 白波点 */
 .action-card.dark-dot {
-  background-color: #5A5260;
+  background-color: var(--btn-dark);
   background-image:
     radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px),
     radial-gradient(circle, #FFFFFF 1.4px, transparent 1.4px);
@@ -206,11 +206,11 @@
 }
 
 .stat-fill.purple {
-  background: #C4B4DA;
+  background: var(--bar-fill-light);
 }
 
 .stat-fill.dark {
-  background: #6E6878;
+  background: var(--bar-fill-dark);
 }
 
 .stat-val {
