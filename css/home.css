@@ -17,8 +17,8 @@
 }
 
 .avatar {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: var(--accent-light);
   border: 2px solid var(--accent-dark);
@@ -27,7 +27,7 @@
   justify-content: center;
 }
 
-.avatar-emoji { font-size: 26px; }
+.avatar-emoji { font-size: 24px; }
 
 .avatar-info {
   display: flex;
@@ -59,8 +59,8 @@
 }
 
 .top-circle-btn {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid var(--card-border);
   background: var(--card-bg);
@@ -75,13 +75,13 @@
 
 .top-circle-btn:active { transform: scale(0.92); }
 
-/* === 宠物卡片（虚线边框） === */
+/* === 宠物卡片（虚线边框，无波浪） === */
 .outer-card {
   position: relative;
   z-index: 1;
   margin: 0 14px 14px;
   padding: 4px;
-  border: 1.5px dashed #B8A8C8;
+  border: 1.5px dashed #C4B0D4;
   border-radius: 28px;
   background: transparent;
 }
@@ -92,23 +92,12 @@
   overflow: hidden;
 }
 
-.pet-card-lace {
-  display: block;
-  line-height: 0;
-}
-
-.pet-card-lace svg {
-  display: block;
-  width: 100%;
-  height: 22px;
-}
-
 .pet-card-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 44px 20px 52px;
-  min-height: 220px;
+  padding: 50px 20px 56px;
+  min-height: 240px;
 }
 
 .pet-big {
@@ -116,7 +105,7 @@
   line-height: 1;
 }
 
-/* === 操作按钮（胶囊形，小巧） === */
+/* === 操作按钮（胶囊，波点+文字，紫/黑交替） === */
 .action-row {
   position: relative;
   z-index: 1;
@@ -127,13 +116,15 @@
 }
 
 .action-card {
-  padding: 8px 18px;
+  padding: 8px 20px;
   border: none;
   border-radius: 20px;
-  background: var(--accent-light);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   cursor: pointer;
   transition: all 0.2s;
   font-family: inherit;
@@ -141,20 +132,29 @@
 
 .action-card:active {
   transform: scale(0.94);
-  background: #E8DAFF;
 }
 
-.action-icon {
-  font-size: 15px;
+.dot-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot-circle.purple {
+  background: var(--accent-dark);
+}
+
+.dot-circle.dark {
+  background: var(--bar-black);
 }
 
 .action-label {
   font-size: 12px;
   font-weight: 700;
-  color: var(--accent-dark);
+  color: var(--text);
 }
 
-/* === 数值条（胶囊卡片） === */
+/* === 数值条（胶囊卡片，浅紫浅黑交替） === */
 .stat-section {
   position: relative;
   z-index: 1;
@@ -187,7 +187,7 @@
 
 .stat-bar {
   flex: 1;
-  height: 7px;
+  height: 6px;
   background: var(--bar-bg);
   border-radius: 4px;
   overflow: hidden;
@@ -200,11 +200,11 @@
 }
 
 .stat-fill.purple {
-  background: var(--bar-purple);
+  background: #C4B4DA;
 }
 
 .stat-fill.dark {
-  background: var(--bar-black);
+  background: #6E6878;
 }
 
 .stat-val {
