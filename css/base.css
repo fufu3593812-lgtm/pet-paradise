@@ -15,6 +15,72 @@
   --bar-black: #3A3540;
   --dock-bg: rgba(255,255,255,0.92);
   --dock-border: #EDE8E3;
+  --dot-bg: #FDF9F3;
+  --dot-1: rgba(170,158,148,0.20);
+  --dot-2: rgba(130,120,112,0.12);
+  --dot-3: rgba(155,145,138,0.16);
+  --btn-purple: #C4B4DA;
+  --btn-dark: #5A5260;
+  --dashed-border: #C4B0D4;
+  --bar-fill-light: #C4B4DA;
+  --bar-fill-dark: #6E6878;
+}
+
+/* === 主题：暖黄 === */
+[data-theme="yellow"] {
+  --bg: #FFFBF0;
+  --accent-light: #FFF3D6;
+  --accent-dark: #C8962A;
+  --card-border: #F0E6D0;
+  --bar-bg: #F5EFE0;
+  --dot-bg: #FFFBF0;
+  --dot-1: rgba(200,170,100,0.22);
+  --dot-2: rgba(180,150,80,0.14);
+  --dot-3: rgba(190,160,90,0.18);
+  --btn-purple: #F0D88A;
+  --btn-dark: #6B5B3A;
+  --dashed-border: #E8D49C;
+  --bar-fill-light: #F0D88A;
+  --bar-fill-dark: #8A7A52;
+  --dock-border: #F0E6D0;
+}
+
+/* === 主题：粉白 === */
+[data-theme="pink"] {
+  --bg: #FFF7F9;
+  --accent-light: #FFE8EE;
+  --accent-dark: #D4708A;
+  --card-border: #F5DDE3;
+  --bar-bg: #FAEEF1;
+  --dot-bg: #FFF7F9;
+  --dot-1: rgba(220,140,160,0.20);
+  --dot-2: rgba(200,120,140,0.12);
+  --dot-3: rgba(210,130,150,0.16);
+  --btn-purple: #F2B8C8;
+  --btn-dark: #6B4A54;
+  --dashed-border: #F0C0D0;
+  --bar-fill-light: #F2B8C8;
+  --bar-fill-dark: #8A5A68;
+  --dock-border: #F5DDE3;
+}
+
+/* === 主题：薄荷巧克力 === */
+[data-theme="mint"] {
+  --bg: #F5FDFB;
+  --accent-light: #DFF5EE;
+  --accent-dark: #4A9B82;
+  --card-border: #D4EAE2;
+  --bar-bg: #E8F5F0;
+  --dot-bg: #F5FDFB;
+  --dot-1: rgba(80,160,130,0.18);
+  --dot-2: rgba(60,140,110,0.12);
+  --dot-3: rgba(70,150,120,0.15);
+  --btn-purple: #8ECAB4;
+  --btn-dark: #3E4A46;
+  --dashed-border: #A0D4C0;
+  --bar-fill-light: #8ECAB4;
+  --bar-fill-dark: #4A5E56;
+  --dock-border: #D4EAE2;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,17 +99,17 @@ body {
   padding-bottom: max(80px, calc(env(safe-area-inset-bottom) + 72px));
 }
 
-/* === 波点背景（奶白偏黄底色 + 渐变灰色波点，深浅不一） === */
+/* === 波点背景 === */
 .dot-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: #FDF9F3;
+  background-color: var(--dot-bg);
   background-image:
-    radial-gradient(circle, rgba(170,158,148,0.20) 1.3px, transparent 1.3px),
-    radial-gradient(circle, rgba(130,120,112,0.12) 0.9px, transparent 0.9px),
-    radial-gradient(circle, rgba(155,145,138,0.16) 1.1px, transparent 1.1px);
+    radial-gradient(circle, var(--dot-1) 1.3px, transparent 1.3px),
+    radial-gradient(circle, var(--dot-2) 0.9px, transparent 0.9px),
+    radial-gradient(circle, var(--dot-3) 1.1px, transparent 1.1px);
   background-size: 26px 26px, 17px 17px, 38px 38px;
   background-position: 0 0, 8px 13px, 19px 6px;
 }
@@ -97,3 +163,34 @@ body {
 .dock-item svg { display: block; }
 .dock-item.active svg { stroke: var(--accent-dark); }
 .dock-item span { font-size: 10px; font-weight: 600; }
+
+/* === 主题切换圆点 === */
+.theme-switcher {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 14px 14px;
+}
+
+.c-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.c-dot:active { transform: scale(0.88); }
+
+.c-dot.active {
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+.c-dot[data-theme="default"] { background: #C4B4DA; }
+.c-dot[data-theme="yellow"] { background: #F0D88A; }
+.c-dot[data-theme="pink"] { background: #F2B8C8; }
+.c-dot[data-theme="mint"] { background: #8ECAB4; }
