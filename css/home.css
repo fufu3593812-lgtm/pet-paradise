@@ -4,114 +4,104 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
-  padding-top: 10px;
+  margin-bottom: 4px;
 }
 
 .pet-frame {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: var(--accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px var(--shadow);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  border: 1.5px dashed var(--border-color);
 }
 
 .pet-img {
-  font-size: 64px;
+  font-size: 56px;
   line-height: 1;
 }
 
 .pet-name-tag {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--accent-dark);
-  background: var(--accent-light);
-  padding: 6px 16px;
-  border-radius: 14px;
 }
 
-/* 状态条 */
-.status-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 16px 18px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 12px var(--shadow);
-  border: 1px solid var(--card-border);
+/* 状态 */
+.status-section {
+  text-align: center;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .status-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 9px 0;
 }
 
-.status-item + .status-item {
-  border-top: 1px solid rgba(0,0,0,0.04);
-}
-
-.status-label {
-  font-size: 13px;
+.status-name {
+  font-size: 12px;
   font-weight: 600;
   color: var(--text);
-  width: 40px;
-  flex-shrink: 0;
+  width: 36px;
+  text-align: right;
 }
 
 .status-bar {
   flex: 1;
-  height: 10px;
+  height: 8px;
   background: var(--bar-bg);
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .status-fill {
   height: 100%;
   background: var(--bar-fill);
-  border-radius: 5px;
-  transition: width 0.4s ease;
+  border-radius: 4px;
+  transition: width 0.4s;
 }
 
-.status-num {
-  font-size: 12px;
+.status-val {
+  font-size: 11px;
   color: var(--text-sub);
-  font-weight: 500;
-  width: 28px;
-  text-align: right;
+  width: 24px;
 }
 
-/* 互动按钮 */
+/* 互动 */
+.action-section {
+  text-align: center;
+}
+
 .action-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
 .action-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 8px;
-  border: none;
-  border-radius: var(--radius-sm);
-  background: var(--accent-light);
-  font-size: 13px;
+  padding: 12px 4px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--page-bg);
+  font-size: 12px;
   font-weight: 600;
-  color: var(--accent-dark);
+  color: var(--text);
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .action-btn:active {
   transform: scale(0.93);
-  background: var(--bar-bg);
+  background: var(--accent-light);
+  border-color: var(--accent);
 }

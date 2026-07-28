@@ -1,95 +1,92 @@
-/* === 宠物乐园 - 基础样式 + 主题系统 === */
+/* === 宠物乐园 - 基础样式 === */
 
-/* --- Pink (默认) --- */
+/* --- 主题变量 --- */
 :root, [data-theme="pink"] {
-  --theme-bg: #FFB6C1;
-  --theme-dot: rgba(255, 255, 255, 0.45);
+  --bg: #F9D5DB;
+  --bg-dot: rgba(255, 255, 255, 0.5);
   --page-bg: #FFFFFF;
-  --card: #FFFFFF;
-  --card-border: rgba(0, 0, 0, 0.04);
-  --text: #3A2030;
-  --text-sub: #999;
-  --accent: #FF7B9A;
-  --accent-light: #FFF0F3;
-  --accent-dark: #E8507A;
+  --text: #4A2A35;
+  --text-sub: #B08A95;
+  --accent: #E88CA5;
+  --accent-light: #FFF2F5;
+  --accent-dark: #C96A82;
   --bar-bg: #FFE8EE;
-  --bar-fill: #FF7B9A;
-  --shadow: rgba(255, 120, 150, 0.08);
-  --radius: 16px;
-  --radius-sm: 12px;
+  --bar-fill: #E88CA5;
+  --label-bg: #F5E0E5;
+  --border-color: #F0C8D2;
+  --shadow: rgba(200, 100, 130, 0.06);
+  --radius: 14px;
 }
 
-/* --- Blue --- */
 [data-theme="blue"] {
-  --theme-bg: #8EC5FC;
-  --theme-dot: rgba(255, 255, 255, 0.4);
-  --accent: #5BA3E8;
-  --accent-light: #EDF6FF;
-  --accent-dark: #3A7DC0;
-  --bar-bg: #DCE9FF;
-  --bar-fill: #5BA3E8;
-  --shadow: rgba(90, 160, 230, 0.08);
-  --text: #1A2A40;
-  --text-sub: #7899B0;
+  --bg: #C8DFF5;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #7BAFD4;
+  --accent-light: #EDF5FC;
+  --accent-dark: #5A8CB8;
+  --bar-bg: #DCE9F5;
+  --bar-fill: #7BAFD4;
+  --label-bg: #DDE8F2;
+  --border-color: #B8D4E8;
+  --text: #2A3A4A;
+  --text-sub: #7899AA;
 }
 
-/* --- Mint --- */
 [data-theme="mint"] {
-  --theme-bg: #7DD8B8;
-  --theme-dot: rgba(255, 255, 255, 0.4);
-  --accent: #4DC0A0;
-  --accent-light: #EDFFF8;
-  --accent-dark: #2A9A7A;
-  --bar-bg: #D0F5E8;
-  --bar-fill: #4DC0A0;
-  --shadow: rgba(70, 190, 160, 0.08);
+  --bg: #C8F0E0;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #6DC0A5;
+  --accent-light: #EDFFF6;
+  --accent-dark: #4A9A80;
+  --bar-bg: #D4F2E8;
+  --bar-fill: #6DC0A5;
+  --label-bg: #D8EDE4;
+  --border-color: #A8D8C8;
   --text: #1A3028;
-  --text-sub: #6A9A88;
+  --text-sub: #6A9A85;
 }
 
-/* --- Red --- */
+[data-theme="purple"] {
+  --bg: #E4D0F0;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #A87CC8;
+  --accent-light: #F8F0FF;
+  --accent-dark: #7E55A0;
+  --bar-bg: #EAD8F5;
+  --bar-fill: #A87CC8;
+  --label-bg: #E8D8F0;
+  --border-color: #C8A8E0;
+  --text: #2A1A35;
+  --text-sub: #8868A0;
+}
+
 [data-theme="red"] {
-  --theme-bg: #FF8A8A;
-  --theme-dot: rgba(255, 255, 255, 0.4);
-  --accent: #FF5252;
+  --bg: #F5C8C8;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #E06060;
   --accent-light: #FFF0F0;
-  --accent-dark: #D32F2F;
-  --bar-bg: #FFD6D6;
-  --bar-fill: #FF5252;
-  --shadow: rgba(255, 80, 80, 0.08);
+  --accent-dark: #C04040;
+  --bar-bg: #F5D8D8;
+  --bar-fill: #E06060;
+  --label-bg: #F0D8D8;
+  --border-color: #E0A8A8;
   --text: #3A1A1A;
   --text-sub: #A06060;
 }
 
-/* --- Purple --- */
-[data-theme="purple"] {
-  --theme-bg: #C9A0DC;
-  --theme-dot: rgba(255, 255, 255, 0.4);
-  --accent: #A06CD5;
-  --accent-light: #F5EEFF;
-  --accent-dark: #7B3FAF;
-  --bar-bg: #E8D4F5;
-  --bar-fill: #A06CD5;
-  --shadow: rgba(160, 108, 213, 0.08);
-  --text: #2A1A3A;
-  --text-sub: #8868A0;
-}
-
-/* --- Black --- */
 [data-theme="black"] {
-  --theme-bg: #4A4A4A;
-  --theme-dot: rgba(255, 255, 255, 0.1);
+  --bg: #3A3A3A;
+  --bg-dot: rgba(255, 255, 255, 0.08);
   --page-bg: #2A2A2A;
-  --card: #3A3A3A;
-  --card-border: rgba(255, 255, 255, 0.06);
-  --accent: #AAAAAA;
+  --accent: #999;
   --accent-light: #3A3A3A;
-  --accent-dark: #DDDDDD;
+  --accent-dark: #CCC;
   --bar-bg: #4A4A4A;
   --bar-fill: #888;
-  --shadow: rgba(0, 0, 0, 0.15);
-  --text: #EEEEEE;
-  --text-sub: #888888;
+  --label-bg: #444;
+  --border-color: #555;
+  --text: #EEE;
+  --text-sub: #888;
 }
 
 /* === Reset === */
@@ -98,7 +95,7 @@
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  background: var(--page-bg);
+  background: var(--bg);
   font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
   color: var(--text);
   max-width: 430px;
@@ -108,80 +105,122 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* === 顶部波点区域 === */
-.header-area {
-  position: relative;
-  background: var(--theme-bg);
-  padding: 48px 20px 28px;
-}
-
-.header-dots {
-  position: absolute;
+/* === 波点背景 === */
+.polka-bg {
+  position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, var(--theme-dot) 4px, transparent 4px);
-  background-size: 28px 28px;
-  background-position: 6px 6px;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, var(--bg-dot) 3px, transparent 3px);
+  background-size: 22px 22px;
+  background-position: 5px 5px;
   pointer-events: none;
+  z-index: 0;
 }
 
-.header-content {
+/* === 白色内容区（手绘边框） === */
+.content-frame {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  background: var(--page-bg);
+  margin: 24px 14px;
+  margin-bottom: max(90px, calc(env(safe-area-inset-bottom) + 80px));
+  padding: 28px 20px 24px;
+  border-radius: 4px;
+  /* 手绘感不规则边框 */
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 20px var(--shadow);
+  /* 用outline做双层边框效果 */
+  outline: 1px dashed var(--border-color);
+  outline-offset: 4px;
+}
+
+/* === 蓝丝蝴蝶结装饰 === */
+.bow {
+  position: absolute;
+  width: 28px;
+  height: 20px;
+  z-index: 5;
+}
+
+.bow::before,
+.bow::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  width: 11px;
+  height: 14px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: transparent;
+}
+
+.bow::before { left: 0; transform: rotate(-12deg); }
+.bow::after { right: 0; transform: rotate(12deg); }
+
+/* 中心结 */
+.bow-top-left { top: -6px; left: 30px; }
+.bow-top-right { top: 40px; right: -6px; transform: rotate(45deg); }
+.bow-bottom-left { bottom: 30px; left: -6px; transform: rotate(-30deg); }
+
+/* === 右上角波点圆扣 === */
+.corner-dot {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.5) 2px, transparent 2px);
+  background-size: 8px 8px;
+  border: 2px solid var(--page-bg);
+  z-index: 6;
+}
+
+/* === 蒸线分隔线 === */
+.lace-divider {
+  margin: 18px 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'%3E%3Cpath d='M0,4 Q5,0 10,4 Q15,8 20,4 Q25,0 30,4 Q35,8 40,4 Q45,0 50,4 Q55,8 60,4 Q65,0 70,4 Q75,8 80,4 Q85,0 90,4 Q95,8 100,4 Q105,0 110,4 Q115,8 120,4' fill='none' stroke='%23F0C8D2' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 120px 8px;
+  background-position: center;
+  opacity: 0.8;
+}
+
+/* === 页面顶部 === */
+.page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .header-title {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: var(--text);
 }
 
 .header-coin {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  color: #fff;
-  background: rgba(255,255,255,0.25);
-  padding: 5px 12px;
-  border-radius: 14px;
+  color: var(--accent-dark);
+  background: var(--label-bg);
+  padding: 4px 12px;
+  border-radius: 12px;
 }
 
-/* === 不规则波浪分隔（顶部header下方） === */
-.wave-border {
-  position: relative;
-  z-index: 3;
-  height: 24px;
-  margin-top: -1px;
-  background: var(--page-bg, #fff);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24'%3E%3Cpath d='M0,24 L0,10 C18,4 38,2 60,8 C90,16 110,20 140,14 C170,8 190,0 220,4 C250,8 275,18 310,14 C340,10 360,4 380,8 C392,10 398,12 400,12 L400,24 Z' fill='white'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24'%3E%3Cpath d='M0,24 L0,10 C18,4 38,2 60,8 C90,16 110,20 140,14 C170,8 190,0 220,4 C250,8 275,18 310,14 C340,10 360,4 380,8 C392,10 398,12 400,12 L400,24 Z' fill='white'/%3E%3C/svg%3E");
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-}
-
-/* dock上方的不规则波浪 */
-.wave-border.dock-wave {
-  margin-top: 0;
-  margin-bottom: -1px;
-  height: 20px;
-  background: var(--theme-bg);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20'%3E%3Cpath d='M0,0 L0,12 C25,18 50,20 80,14 C110,8 140,4 170,10 C200,16 230,20 260,14 C290,8 320,2 350,8 C375,12 390,16 400,12 L400,0 Z' fill='white'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20'%3E%3Cpath d='M0,0 L0,12 C25,18 50,20 80,14 C110,8 140,4 170,10 C200,16 230,20 260,14 C290,8 320,2 350,8 C375,12 390,16 400,12 L400,0 Z' fill='white'/%3E%3C/svg%3E");
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-}
-
-/* === 主体内容区 === */
-.main-content {
-  padding: 20px 16px;
-  padding-bottom: max(100px, calc(env(safe-area-inset-bottom) + 90px));
-  background: var(--page-bg);
+/* === 标签样式 === */
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: var(--label-bg);
+  padding: 4px 16px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
 /* === 底部Dock === */
@@ -192,22 +231,14 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 430px;
-  background: var(--theme-bg);
-  padding: 10px 0;
-  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  background: var(--page-bg);
+  border-top: 1.5px solid var(--border-color);
+  padding: 8px 0;
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
   display: flex;
   align-items: center;
   justify-content: space-around;
   z-index: 100;
-}
-
-.dock-dots {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, var(--theme-dot) 4px, transparent 4px);
-  background-size: 28px 28px;
-  background-position: 6px 6px;
-  pointer-events: none;
 }
 
 .dock-item {
@@ -216,21 +247,10 @@ body {
   align-items: center;
   gap: 2px;
   text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  position: relative;
-  z-index: 2;
-  transition: all 0.2s;
+  color: var(--text-sub);
+  transition: color 0.2s;
 }
 
-.dock-item.active { color: #fff; }
+.dock-item.active { color: var(--accent-dark); }
 .dock-icon { font-size: 20px; }
 .dock-label { font-size: 10px; font-weight: 600; }
-
-/* === 通用组件 === */
-.section-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 12px;
-  padding-left: 2px;
-}

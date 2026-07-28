@@ -9,67 +9,76 @@
 </head>
 <body data-theme="pink">
 
-<header class="header-area">
-  <div class="header-dots"></div>
-  <div class="header-content">
+<div class="polka-bg"></div>
+
+<div class="content-frame">
+  <div class="bow bow-top-left"></div>
+  <div class="bow bow-top-right"></div>
+  <div class="bow bow-bottom-left"></div>
+  <div class="corner-dot"></div>
+
+  <header class="page-header">
     <span class="header-title">盲盒孵蛋</span>
     <span class="header-coin">💎 1320</span>
-  </div>
-</header>
-<div class="wave-border"></div>
+  </header>
 
-<main class="main-content">
+  <div class="lace-divider"></div>
 
   <!-- 三档蛋 -->
-  <section class="egg-selection">
-    <div class="egg-card" data-tier="low">
-      <div class="egg-visual">🥚</div>
+  <section class="egg-list">
+    <div class="egg-card">
+      <div class="egg-icon">🥚</div>
       <div class="egg-info">
         <span class="egg-tier">普通蛋</span>
         <span class="egg-desc">常见宠物为主</span>
-        <span class="egg-price">💎 100</span>
       </div>
-      <button class="egg-btn">孵化</button>
+      <div class="egg-right">
+        <span class="egg-price">💎 100</span>
+        <button class="egg-btn">孵化</button>
+      </div>
     </div>
-    <div class="egg-card" data-tier="mid">
-      <div class="egg-visual">🪺</div>
+    <div class="egg-card">
+      <div class="egg-icon">🪺</div>
       <div class="egg-info">
         <span class="egg-tier">精良蛋</span>
         <span class="egg-desc">稀有概率提升</span>
-        <span class="egg-price">💎 300</span>
       </div>
-      <button class="egg-btn">孵化</button>
+      <div class="egg-right">
+        <span class="egg-price">💎 300</span>
+        <button class="egg-btn">孵化</button>
+      </div>
     </div>
-    <div class="egg-card" data-tier="high">
-      <div class="egg-visual">✨🥚✨</div>
+    <div class="egg-card">
+      <div class="egg-icon">✨🥚</div>
       <div class="egg-info">
         <span class="egg-tier">传说蛋</span>
         <span class="egg-desc">必出稀有以上</span>
-        <span class="egg-price">💎 800</span>
       </div>
-      <button class="egg-btn">孵化</button>
+      <div class="egg-right">
+        <span class="egg-price">💎 800</span>
+        <button class="egg-btn">孵化</button>
+      </div>
     </div>
   </section>
+
+  <div class="lace-divider"></div>
 
   <!-- 孵化中 -->
-  <section class="hatching-area">
-    <h3 class="section-title">孵化中</h3>
-    <div class="hatching-slot">
-      <div class="hatching-egg">🥚</div>
-      <div class="hatching-info">
-        <span class="hatching-name">普通蛋 #1</span>
-        <div class="hatching-progress"><div class="hatching-fill" style="width:65%"></div></div>
-        <span class="hatching-time">剩余 2小时30分</span>
+  <section class="hatching-section">
+    <div class="section-label">孵化中</div>
+    <div class="hatch-slot">
+      <div class="hatch-egg">🥚</div>
+      <div class="hatch-info">
+        <span class="hatch-name">普通蛋 #1</span>
+        <div class="hatch-bar"><div class="hatch-fill" style="width:65%"></div></div>
+        <span class="hatch-time">剩余 2小时30分</span>
       </div>
     </div>
-    <div class="hatching-empty">暂无更多孵化中的蛋</div>
   </section>
 
-</main>
+</div>
 
-<div class="wave-border dock-wave"></div>
 <nav class="dock">
-  <div class="dock-dots"></div>
   <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
   <a href="hatch.html" class="dock-item active"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
   <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">论坛</span></a>

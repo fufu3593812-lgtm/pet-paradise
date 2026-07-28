@@ -9,20 +9,25 @@
 </head>
 <body data-theme="pink">
 
-<!-- 顶部波点区 -->
-<header class="header-area">
-  <div class="header-dots"></div>
-  <div class="header-content">
+<!-- 粉色波点底 -->
+<div class="polka-bg"></div>
+
+<!-- 白色内容区（手绘边框） -->
+<div class="content-frame">
+  <!-- 蓝丝蝴蝶结装饰 -->
+  <div class="bow bow-top-left"></div>
+  <div class="bow bow-top-right"></div>
+  <div class="bow bow-bottom-left"></div>
+  <!-- 右上角波点圆扣 -->
+  <div class="corner-dot"></div>
+
+  <!-- 顶部标题 -->
+  <header class="page-header">
     <span class="header-title">宠物乐园</span>
     <span class="header-coin">💎 1320</span>
-  </div>
-</header>
-<div class="wave-border"></div>
+  </header>
 
-<!-- 主体内容 -->
-<main class="main-content">
-
-  <!-- 宠物展示区 -->
+  <!-- 宠物展示 -->
   <section class="pet-stage">
     <div class="pet-frame">
       <div class="pet-img">🐕</div>
@@ -30,39 +35,48 @@
     <div class="pet-name-tag">小奶糖 · Lv.12</div>
   </section>
 
-  <!-- 状态条 -->
-  <section class="status-card">
-    <div class="status-item">
-      <span class="status-label">心情</span>
-      <div class="status-bar"><div class="status-fill" style="width:80%"></div></div>
-      <span class="status-num">80</span>
-    </div>
-    <div class="status-item">
-      <span class="status-label">饱食</span>
-      <div class="status-bar"><div class="status-fill" style="width:60%"></div></div>
-      <span class="status-num">60</span>
-    </div>
-    <div class="status-item">
-      <span class="status-label">清洁</span>
-      <div class="status-bar"><div class="status-fill" style="width:45%"></div></div>
-      <span class="status-num">45</span>
+  <!-- 蒸线分隔 -->
+  <div class="lace-divider"></div>
+
+  <!-- 状态 -->
+  <section class="status-section">
+    <div class="section-label">状态</div>
+    <div class="status-list">
+      <div class="status-item">
+        <span class="status-name">心情</span>
+        <div class="status-bar"><div class="status-fill" style="width:80%"></div></div>
+        <span class="status-val">80</span>
+      </div>
+      <div class="status-item">
+        <span class="status-name">饱食</span>
+        <div class="status-bar"><div class="status-fill" style="width:60%"></div></div>
+        <span class="status-val">60</span>
+      </div>
+      <div class="status-item">
+        <span class="status-name">清洁</span>
+        <div class="status-bar"><div class="status-fill" style="width:45%"></div></div>
+        <span class="status-val">45</span>
+      </div>
     </div>
   </section>
 
-  <!-- 互动按钮 -->
-  <section class="action-row">
-    <button class="action-btn">🍖 喂食</button>
-    <button class="action-btn">🎾 玩耍</button>
-    <button class="action-btn">🛁 洗澡</button>
-    <button class="action-btn">😴 休息</button>
+  <!-- 蒸线分隔 -->
+  <div class="lace-divider"></div>
+
+  <!-- 互动 -->
+  <section class="action-section">
+    <div class="action-row">
+      <button class="action-btn">🍖 喂食</button>
+      <button class="action-btn">🎾 玩耍</button>
+      <button class="action-btn">🛁 洗澡</button>
+      <button class="action-btn">😴 休息</button>
+    </div>
   </section>
 
-</main>
+</div>
 
-<!-- 底部波浪 + dock -->
-<div class="wave-border dock-wave"></div>
+<!-- 底部导航 -->
 <nav class="dock">
-  <div class="dock-dots"></div>
   <a href="index.html" class="dock-item active"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
   <a href="hatch.html" class="dock-item"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
   <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">论坛</span></a>

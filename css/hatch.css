@@ -1,152 +1,138 @@
 /* === 孵蛋页 === */
 
-.egg-selection {
+.egg-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-bottom: 4px;
 }
 
 .egg-card {
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 18px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  box-shadow: 0 2px 12px var(--shadow);
-  transition: transform 0.2s;
+  gap: 12px;
+  padding: 14px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--page-bg);
 }
 
-.egg-card:active { transform: scale(0.98); }
-
-.egg-card[data-tier="high"] {
-  background: linear-gradient(135deg, var(--accent-light), var(--card));
-  border-color: var(--accent);
-}
-
-.egg-visual {
-  font-size: 36px;
-  width: 56px;
-  height: 56px;
+.egg-icon {
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: 1px dashed var(--border-color);
 }
 
 .egg-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .egg-tier {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
 }
 
 .egg-desc {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-sub);
 }
 
+.egg-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
 .egg-price {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 11px;
   color: var(--accent-dark);
-  margin-top: 2px;
+  font-weight: 600;
 }
 
 .egg-btn {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 20px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 13px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--accent);
+  border-radius: 12px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: 11px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: all 0.2s;
 }
 
-.egg-btn:active { transform: scale(0.93); }
+.egg-btn:active {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(0.93);
+}
 
 /* 孵化中 */
-.hatching-area {
-  margin-top: 8px;
+.hatching-section {
+  text-align: center;
 }
 
-.hatching-slot {
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 16px;
+.hatch-slot {
   display: flex;
   align-items: center;
-  gap: 14px;
-  box-shadow: 0 2px 12px var(--shadow);
-  margin-bottom: 10px;
+  gap: 12px;
+  padding: 12px;
+  border: 1px dashed var(--border-color);
+  border-radius: 10px;
+  margin-top: 4px;
 }
 
-.hatching-egg {
-  font-size: 32px;
-  width: 48px;
-  height: 48px;
-  background: var(--bar-bg);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hatch-egg {
+  font-size: 24px;
   animation: eggBounce 2s ease-in-out infinite;
 }
 
 @keyframes eggBounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  50% { transform: translateY(-3px); }
 }
 
-.hatching-info {
+.hatch-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
+  text-align: left;
 }
 
-.hatching-name {
-  font-size: 13px;
+.hatch-name {
+  font-size: 12px;
   font-weight: 600;
   color: var(--text);
 }
 
-.hatching-progress {
-  height: 8px;
+.hatch-bar {
+  height: 6px;
   background: var(--bar-bg);
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
-.hatching-fill {
+.hatch-fill {
   height: 100%;
   background: var(--bar-fill);
-  border-radius: 4px;
-  transition: width 0.3s;
+  border-radius: 3px;
 }
 
-.hatching-time {
-  font-size: 11px;
+.hatch-time {
+  font-size: 10px;
   color: var(--text-sub);
-}
-
-.hatching-empty {
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-sub);
-  padding: 20px 0;
 }

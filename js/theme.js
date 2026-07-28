@@ -10,7 +10,7 @@
     if (themes.indexOf(theme) === -1) return;
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('pet-theme', theme);
-    document.querySelectorAll('.theme-dot').forEach(function(el) {
+    document.querySelectorAll('.t-dot').forEach(function(el) {
       el.classList.toggle('active', el.getAttribute('data-theme') === theme);
     });
   };
