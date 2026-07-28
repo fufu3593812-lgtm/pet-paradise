@@ -1,0 +1,182 @@
+/* === Pet Detail Page === */
+.pet-page {
+  padding: 20px 16px;
+  padding-bottom: max(80px, calc(env(safe-area-inset-bottom) + 64px));
+  position: relative;
+  z-index: 1;
+}
+
+.pet-display {
+  text-align: center;
+  padding: 20px 0 24px;
+}
+
+.pet-avatar {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.pet-name-large {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.pet-badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Stats */
+.pet-stats {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-label {
+  width: 40px;
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.stat-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--accent-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.stat-value {
+  width: 32px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-sub);
+  font-weight: 500;
+}
+
+/* Evolution Track */
+.pet-evolution {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+
+.evo-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0 12px;
+}
+
+.evo-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.evo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.evo-node.done .evo-circle {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.evo-node.current .evo-circle {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.evo-label {
+  font-size: 10px;
+  color: var(--text-light);
+  font-weight: 300;
+}
+
+.evo-line {
+  width: 28px;
+  height: 2px;
+  background: var(--card-border);
+  margin: 0 4px;
+  margin-bottom: 20px;
+}
+
+.evo-line.done { background: var(--accent); }
+.evo-line.active { background: linear-gradient(90deg, var(--accent), var(--card-border)); }
+
+/* Actions */
+.pet-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  font-size: 11px;
+  color: var(--text-sub);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.action-icon { font-size: 20px; }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>盲盒孵蛋 - Pet Paradise</title>
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/hatch.css">
+</head>
+<body data-theme="mint">
+<div class="dots-bg"></div>
+<header class="top-bar">
+  <a href="index.html" class="back-btn">←</a>
+  <div class="page-title">盲盒孵蛋</div>
+  <button class="theme-btn" onclick="cycleTheme()" aria-label="切换主题">🎨</button>
+</header>
+<main class="hatch-page">
+  <section class="egg-display">
+    <div class="egg-container" id="eggContainer">
+      <div class="egg" id="egg">
+        <div class="egg-body">
+          <div class="egg-shine"></div>
+          <div class="egg-dots"></div>
+        </div>
+        <div class="egg-shadow"></div>
+      </div>
+    </div>
+    <p class="egg-hint">点击蛋开始孵化</p>
+  </section>
+  <section class="egg-options">
+    <div class="option-card" data-tier="low">
+      <div class="option-icon">🥚</div>
+      <div class="option-info">
+        <h3>普通蛋</h3>
+        <p>常见品种，孵化快</p>
+      </div>
+      <div class="option-cost">免费</div>
+    </div>
+    <div class="option-card" data-tier="mid">
+      <div class="option-icon">🪺</div>
+      <div class="option-info">
+        <h3>稀有蛋</h3>
+        <p>稀有品种，孵化中等</p>
+      </div>
+      <div class="option-cost">50 币</div>
+    </div>
+    <div class="option-card" data-tier="high">
+      <div class="option-icon">✨</div>
+      <div class="option-info">
+        <h3>传说蛋</h3>
+        <p>极稀有品种，孵化慢</p>
+      </div>
+      <div class="option-cost">200 币</div>
+    </div>
+  </section>
+  <section class="hatch-result" id="hatchResult" style="display:none">
+    <div class="result-card">
+      <div class="result-img"><div class="placeholder-pet big">🐣</div></div>
+      <h2 class="result-name">小火龙</h2>
+      <p class="result-rarity">稀有</p>
+      <p class="result-desc">一只温暖的小家伙，喜欢阳光</p>
+      <button class="btn-primary" onclick="confirmHatch()">带回家</button>
+    </div>
+  </section>
+</main>
+<nav class="dock">
+  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
+  <a href="hatch.html" class="dock-item active"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
+  <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">社区</span></a>
+  <a href="settings.html" class="dock-item"><span class="dock-icon">⚙️</span><span class="dock-label">设置</span></a>
+</nav>
+<script src="js/theme.js"></script>
+<script src="js/hatch.js"></script>
+</body>
+</html>
