@@ -19,8 +19,8 @@
       <span class="avatar-emoji">🐶</span>
     </div>
     <div class="avatar-info">
-      <span class="pet-name">小奶糖</span>
-      <div class="intimacy-tag">♡ Lv.12 ›</div>
+      <span class="pet-name">小奶糖 ✎</span>
+      <div class="intimacy-tag">♡ 亲密度 520 ›</div>
     </div>
   </div>
   <div class="top-btns">
@@ -33,19 +33,21 @@
   </div>
 </header>
 
-<!-- 宠物卡片（只放宠物） -->
-<section class="pet-card">
-  <div class="pet-card-lace">
-    <svg width="100%" height="20" preserveAspectRatio="none" viewBox="0 0 400 20">
-      <path d="M0,20 C8,20 12,4 20,4 C28,4 32,20 40,20 C48,20 52,4 60,4 C68,4 72,20 80,20 C88,20 92,4 100,4 C108,4 112,20 120,20 C128,20 132,4 140,4 C148,4 152,20 160,20 C168,20 172,4 180,4 C188,4 192,20 200,20 C208,20 212,4 220,4 C228,4 232,20 240,20 C248,20 252,4 260,4 C268,4 272,20 280,20 C288,20 292,4 300,4 C308,4 312,20 320,20 C328,20 332,4 340,4 C348,4 352,20 360,20 C368,20 372,4 380,4 C388,4 392,20 400,20" fill="none" stroke="#DADADA" stroke-width="1.2"/>
-    </svg>
-  </div>
-  <div class="pet-card-body">
-    <div class="pet-big">🐶</div>
+<!-- 宠物展示（外层虚线圆角大卡片） -->
+<section class="outer-card">
+  <div class="outer-card-inner">
+    <div class="pet-card-lace">
+      <svg width="100%" height="22" preserveAspectRatio="none" viewBox="0 0 400 22">
+        <path d="M0,22 C7,22 10,5 18,5 C26,5 29,22 36,22 C43,22 46,5 54,5 C62,5 65,22 72,22 C79,22 82,5 90,5 C98,5 101,22 108,22 C115,22 118,5 126,5 C134,5 137,22 144,22 C151,22 154,5 162,5 C170,5 173,22 180,22 C187,22 190,5 198,5 C206,5 209,22 216,22 C223,22 226,5 234,5 C242,5 245,22 252,22 C259,22 262,5 270,5 C278,5 281,22 288,22 C295,22 298,5 306,5 C314,5 317,22 324,22 C331,22 334,5 342,5 C350,5 353,22 360,22 C367,22 370,5 378,5 C386,5 389,22 396,22 L400,22" fill="none" stroke="#D8D0DC" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="pet-card-body">
+      <div class="pet-big">🐶</div>
+    </div>
   </div>
 </section>
 
-<!-- 操作按钮（卡片下方） -->
+<!-- 操作按钮 -->
 <section class="action-row">
   <button class="action-card">
     <span class="action-icon">⬆️</span>
@@ -61,27 +63,29 @@
   </button>
 </section>
 
-<!-- 数值条（按钮下方） -->
+<!-- 数值条 -->
 <section class="stat-section">
-  <div class="stat-item">
-    <span class="stat-label">战力</span>
-    <div class="stat-bar"><div class="stat-fill dark" style="width:72%"></div></div>
-    <span class="stat-val">360</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-label">心情</span>
-    <div class="stat-bar"><div class="stat-fill purple" style="width:85%"></div></div>
-    <span class="stat-val">85</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-label">饱食</span>
-    <div class="stat-bar"><div class="stat-fill purple" style="width:60%"></div></div>
-    <span class="stat-val">60</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-label">清洁</span>
-    <div class="stat-bar"><div class="stat-fill dark" style="width:45%"></div></div>
-    <span class="stat-val">45</span>
+  <div class="stat-section-inner">
+    <div class="stat-item">
+      <span class="stat-label">战力</span>
+      <div class="stat-bar"><div class="stat-fill dark" style="width:72%"></div></div>
+      <span class="stat-val">360</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">心情</span>
+      <div class="stat-bar"><div class="stat-fill purple" style="width:85%"></div></div>
+      <span class="stat-val">85</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">饱食</span>
+      <div class="stat-bar"><div class="stat-fill purple" style="width:60%"></div></div>
+      <span class="stat-val">60</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">清洁</span>
+      <div class="stat-bar"><div class="stat-fill dark" style="width:45%"></div></div>
+      <span class="stat-val">45</span>
+    </div>
   </div>
 </section>
 
