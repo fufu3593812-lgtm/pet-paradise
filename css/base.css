@@ -17,7 +17,6 @@
   --shadow: rgba(255, 120, 150, 0.08);
   --radius: 16px;
   --radius-sm: 12px;
-  --scallop-color: #FFFFFF;
 }
 
 /* --- Blue --- */
@@ -89,7 +88,6 @@
   --bar-bg: #4A4A4A;
   --bar-fill: #888;
   --shadow: rgba(0, 0, 0, 0.15);
-  --scallop-color: #2A2A2A;
   --text: #EEEEEE;
   --text-sub: #888888;
 }
@@ -114,7 +112,7 @@ body {
 .header-area {
   position: relative;
   background: var(--theme-bg);
-  padding: 48px 20px 20px;
+  padding: 48px 20px 28px;
 }
 
 .header-dots {
@@ -150,33 +148,33 @@ body {
   border-radius: 14px;
 }
 
-/* === Scallop 波浪分隔线 === */
-.scallop-divider {
+/* === 不规则波浪分隔（顶部header下方） === */
+.wave-border {
   position: relative;
   z-index: 3;
-  height: 16px;
-  background: var(--scallop-color);
-}
-
-.scallop-divider.header-scallop {
+  height: 24px;
   margin-top: -1px;
   background: var(--page-bg, #fff);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16'%3E%3Cpath d='M0,16 C12.5,16 12.5,0 25,0 C37.5,0 37.5,16 50,16 C62.5,16 62.5,0 75,0 C87.5,0 87.5,16 100,16 C112.5,16 112.5,0 125,0 C137.5,0 137.5,16 150,16 C162.5,16 162.5,0 175,0 C187.5,0 187.5,16 200,16 L200,16 L0,16 Z' fill='white'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16'%3E%3Cpath d='M0,16 C12.5,16 12.5,0 25,0 C37.5,0 37.5,16 50,16 C62.5,16 62.5,0 75,0 C87.5,0 87.5,16 100,16 C112.5,16 112.5,0 125,0 C137.5,0 137.5,16 150,16 C162.5,16 162.5,0 175,0 C187.5,0 187.5,16 200,16 L200,16 L0,16 Z' fill='white'/%3E%3C/svg%3E");
-  mask-size: 200px 16px;
-  -webkit-mask-size: 200px 16px;
-  mask-repeat: repeat-x;
-  -webkit-mask-repeat: repeat-x;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24'%3E%3Cpath d='M0,24 L0,10 C18,4 38,2 60,8 C90,16 110,20 140,14 C170,8 190,0 220,4 C250,8 275,18 310,14 C340,10 360,4 380,8 C392,10 398,12 400,12 L400,24 Z' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24'%3E%3Cpath d='M0,24 L0,10 C18,4 38,2 60,8 C90,16 110,20 140,14 C170,8 190,0 220,4 C250,8 275,18 310,14 C340,10 360,4 380,8 C392,10 398,12 400,12 L400,24 Z' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
-.scallop-divider.dock-scallop {
+/* dock上方的不规则波浪 */
+.wave-border.dock-wave {
+  margin-top: 0;
+  margin-bottom: -1px;
+  height: 20px;
   background: var(--theme-bg);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16'%3E%3Cpath d='M0,0 C12.5,0 12.5,16 25,16 C37.5,16 37.5,0 50,0 C62.5,0 62.5,16 75,16 C87.5,16 87.5,0 100,0 C112.5,0 112.5,16 125,16 C137.5,16 137.5,0 150,0 C162.5,0 162.5,16 175,16 C187.5,16 187.5,0 200,0 L200,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16'%3E%3Cpath d='M0,0 C12.5,0 12.5,16 25,16 C37.5,16 37.5,0 50,0 C62.5,0 62.5,16 75,16 C87.5,16 87.5,0 100,0 C112.5,0 112.5,16 125,16 C137.5,16 137.5,0 150,0 C162.5,0 162.5,16 175,16 C187.5,16 187.5,0 200,0 L200,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
-  mask-size: 200px 16px;
-  -webkit-mask-size: 200px 16px;
-  mask-repeat: repeat-x;
-  -webkit-mask-repeat: repeat-x;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20'%3E%3Cpath d='M0,0 L0,12 C25,18 50,20 80,14 C110,8 140,4 170,10 C200,16 230,20 260,14 C290,8 320,2 350,8 C375,12 390,16 400,12 L400,0 Z' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20'%3E%3Cpath d='M0,0 L0,12 C25,18 50,20 80,14 C110,8 140,4 170,10 C200,16 230,20 260,14 C290,8 320,2 350,8 C375,12 390,16 400,12 L400,0 Z' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
 /* === 主体内容区 === */
@@ -201,7 +199,6 @@ body {
   align-items: center;
   justify-content: space-around;
   z-index: 100;
-  position: relative;
 }
 
 .dock-dots {
