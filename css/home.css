@@ -105,13 +105,13 @@
   line-height: 1;
 }
 
-/* === 操作按钮（小胶囊，间距大，浅紫/灰黑底+白波点交替） === */
+/* === 操作按钮（小胶囊，间距大，往里收不超过卡片） === */
 .action-row {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  margin: 0 14px 14px;
+  margin: 0 24px 14px;
 }
 
 .action-card {
