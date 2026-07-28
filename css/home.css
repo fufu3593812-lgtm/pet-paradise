@@ -105,13 +105,13 @@
   line-height: 1;
 }
 
-/* === 操作按钮（小胶囊，间距大，往里收不超过卡片） === */
+/* === 操作按钮（小胶囊，往里收） === */
 .action-row {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  margin: 0 24px 14px;
+  margin: 0 34px 14px;
 }
 
 .action-card {
