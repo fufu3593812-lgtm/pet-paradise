@@ -64,6 +64,13 @@
   box-shadow: var(--card-shadow);
 }
 
+.egg-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .egg-icon {
   font-size: 32px;
   width: 48px;
@@ -128,6 +135,13 @@
   box-shadow: var(--card-shadow);
 }
 
+.hatch-egg-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  animation: bounce 2s ease-in-out infinite;
+}
+
 .hatch-emoji {
   font-size: 28px;
   animation: bounce 2s ease-in-out infinite;
@@ -160,7 +174,7 @@
 
 .hatch-fill {
   height: 100%;
-  background: var(--bar-fill);
+  background: var(--bar-fill-light);
   border-radius: 3px;
 }
 
