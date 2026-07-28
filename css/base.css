@@ -14,8 +14,9 @@
   --bar-fill: #E88CA5;
   --label-bg: #F5E0E5;
   --border-color: #F0C8D2;
+  --lace-color: #F0C8D2;
   --shadow: rgba(200, 100, 130, 0.06);
-  --radius: 14px;
+  --radius: 20px;
 }
 
 [data-theme="blue"] {
@@ -28,6 +29,7 @@
   --bar-fill: #7BAFD4;
   --label-bg: #DDE8F2;
   --border-color: #B8D4E8;
+  --lace-color: #B8D4E8;
   --text: #2A3A4A;
   --text-sub: #7899AA;
 }
@@ -42,6 +44,7 @@
   --bar-fill: #6DC0A5;
   --label-bg: #D8EDE4;
   --border-color: #A8D8C8;
+  --lace-color: #A8D8C8;
   --text: #1A3028;
   --text-sub: #6A9A85;
 }
@@ -56,6 +59,7 @@
   --bar-fill: #A87CC8;
   --label-bg: #E8D8F0;
   --border-color: #C8A8E0;
+  --lace-color: #C8A8E0;
   --text: #2A1A35;
   --text-sub: #8868A0;
 }
@@ -70,6 +74,7 @@
   --bar-fill: #E06060;
   --label-bg: #F0D8D8;
   --border-color: #E0A8A8;
+  --lace-color: #E0A8A8;
   --text: #3A1A1A;
   --text-sub: #A06060;
 }
@@ -85,6 +90,7 @@
   --bar-fill: #888;
   --label-bg: #444;
   --border-color: #555;
+  --lace-color: #555;
   --text: #EEE;
   --text-sub: #888;
 }
@@ -117,7 +123,7 @@ body {
   z-index: 0;
 }
 
-/* === 白色内容区（手绘边框） === */
+/* === 白色内容区（圆角 + 蕾丝花边） === */
 .content-frame {
   position: relative;
   z-index: 1;
@@ -125,16 +131,40 @@ body {
   margin: 24px 14px;
   margin-bottom: max(90px, calc(env(safe-area-inset-bottom) + 80px));
   padding: 28px 20px 24px;
-  border-radius: 4px;
-  /* 手绘感不规则边框 */
-  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border-color);
   box-shadow: 0 4px 20px var(--shadow);
-  /* 用outline做双层边框效果 */
-  outline: 1px dashed var(--border-color);
-  outline-offset: 4px;
 }
 
-/* === 蓝丝蝴蝶结装饰 === */
+/* 蕾丝花边（连续半圆弧围绕边框外圈） */
+.content-frame::before {
+  content: '';
+  position: absolute;
+  inset: -9px;
+  border-radius: calc(var(--radius) + 6px);
+  pointer-events: none;
+  background:
+    /* 上边蕾丝 */
+    radial-gradient(circle 5px at 5px 0px, transparent 4px, var(--lace-color) 4px, var(--lace-color) 5px, transparent 5px) repeat-x,
+    /* 下边蕾丝 */
+    radial-gradient(circle 5px at 5px 100%, transparent 4px, var(--lace-color) 4px, var(--lace-color) 5px, transparent 5px) repeat-x,
+    /* 左边蕾丝 */
+    radial-gradient(circle 5px at 0px 5px, transparent 4px, var(--lace-color) 4px, var(--lace-color) 5px, transparent 5px) repeat-y,
+    /* 右边蕾丝 */
+    radial-gradient(circle 5px at 100% 5px, transparent 4px, var(--lace-color) 4px, var(--lace-color) 5px, transparent 5px) repeat-y;
+  background-size:
+    10px 9px,
+    10px 9px,
+    9px 10px,
+    9px 10px;
+  background-position:
+    left top,
+    left bottom,
+    left top,
+    right top;
+}
+
+/* === 蝴蝶结装饰 === */
 .bow {
   position: absolute;
   width: 28px;
@@ -157,7 +187,6 @@ body {
 .bow::before { left: 0; transform: rotate(-12deg); }
 .bow::after { right: 0; transform: rotate(12deg); }
 
-/* 中心结 */
 .bow-top-left { top: -6px; left: 30px; }
 .bow-top-right { top: 40px; right: -6px; transform: rotate(45deg); }
 .bow-bottom-left { bottom: 30px; left: -6px; transform: rotate(-30deg); }
@@ -177,15 +206,36 @@ body {
   z-index: 6;
 }
 
-/* === 蒸线分隔线 === */
+/* === 蕾丝分隔线（连续小半圆弧） === */
 .lace-divider {
-  margin: 18px 0;
-  height: 8px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'%3E%3Cpath d='M0,4 Q5,0 10,4 Q15,8 20,4 Q25,0 30,4 Q35,8 40,4 Q45,0 50,4 Q55,8 60,4 Q65,0 70,4 Q75,8 80,4 Q85,0 90,4 Q95,8 100,4 Q105,0 110,4 Q115,8 120,4' fill='none' stroke='%23F0C8D2' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  margin: 16px 0;
+  height: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lace-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2px;
+  height: 10px;
+  background-image: radial-gradient(circle 4px at 4px 0px, var(--lace-color) 3.5px, transparent 3.5px);
+  background-size: 9px 9px;
   background-repeat: repeat-x;
-  background-size: 120px 8px;
-  background-position: center;
-  opacity: 0.8;
+  opacity: 0.6;
+}
+
+.lace-divider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  height: 1px;
+  background: var(--lace-color);
+  opacity: 0.3;
 }
 
 /* === 页面顶部 === */
@@ -193,7 +243,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .header-title {
