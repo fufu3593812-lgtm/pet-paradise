@@ -3,82 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>宠物详情 - Pet Paradise</title>
-<link rel="stylesheet" href="css/theme.css">
-<link rel="stylesheet" href="css/pet.css">
+<title>Pet List - Dot Diary</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/petlist.css">
 </head>
-<body data-theme="mint">
+<body data-theme="pink">
+
 <div class="dots-bg"></div>
-<header class="top-bar">
-  <a href="index.html" class="back-btn">←</a>
-  <div class="page-title">宠物详情</div>
-  <button class="theme-btn" onclick="cycleTheme()" aria-label="切换主题">🎨</button>
+
+<header class="page-bar">
+  <button class="back-btn" onclick="history.back()">←</button>
+  <div class="page-title">• Pet List •</div>
+  <button class="page-action">＋</button>
 </header>
-<main class="pet-page">
-  <section class="pet-display">
-    <div class="pet-avatar">
-      <div class="placeholder-pet large">🐱</div>
+
+<div class="wave-divider top"></div>
+
+<main class="petlist-main">
+
+  <div class="pet-grid">
+    <div class="pet-card active">
+      <span class="pet-card-check">✓</span>
+      <div class="pet-card-img">🐩</div>
+      <span class="pet-card-name">Bichon</span>
+      <span class="pet-card-level"><span class="level-dot"></span>Lv.12</span>
     </div>
-    <h1 class="pet-name-large">小薄荷</h1>
-    <div class="pet-badges">
-      <span class="badge rarity-rare">稀有</span>
-      <span class="badge stage">成长期</span>
+    <div class="pet-card">
+      <div class="pet-card-img">🐕</div>
+      <span class="pet-card-name">Poodle</span>
+      <span class="pet-card-level"><span class="level-dot"></span>Lv.8</span>
     </div>
-  </section>
-  <section class="pet-stats">
-    <div class="stat-row">
-      <span class="stat-label">心情</span>
-      <div class="stat-bar"><div class="stat-fill" style="width:80%"></div></div>
-      <span class="stat-value">80</span>
+    <div class="pet-card">
+      <div class="pet-card-img">🐱</div>
+      <span class="pet-card-name">Kitty</span>
+      <span class="pet-card-level"><span class="level-dot"></span>Lv.5</span>
     </div>
-    <div class="stat-row">
-      <span class="stat-label">饱食</span>
-      <div class="stat-bar"><div class="stat-fill" style="width:60%"></div></div>
-      <span class="stat-value">60</span>
+    <div class="pet-card locked">
+      <div class="pet-card-lock">🔒</div>
+      <div class="pet-card-img">🐰</div>
+      <span class="pet-card-name">Bunny</span>
+      <span class="pet-card-level"><span class="level-dot"></span>Lv.3</span>
     </div>
-    <div class="stat-row">
-      <span class="stat-label">成长</span>
-      <div class="stat-bar"><div class="stat-fill" style="width:45%"></div></div>
-      <span class="stat-value">45%</span>
-    </div>
-  </section>
-  <section class="pet-evolution">
-    <h2 class="section-title">进化路线</h2>
-    <div class="evo-track">
-      <div class="evo-node done">
-        <div class="evo-circle">🥚</div>
-        <span class="evo-label">蛋</span>
-      </div>
-      <div class="evo-line done"></div>
-      <div class="evo-node done">
-        <div class="evo-circle">🐣</div>
-        <span class="evo-label">幼体</span>
-      </div>
-      <div class="evo-line active"></div>
-      <div class="evo-node current">
-        <div class="evo-circle">🐱</div>
-        <span class="evo-label">成长</span>
-      </div>
-      <div class="evo-line"></div>
-      <div class="evo-node">
-        <div class="evo-circle">❓</div>
-        <span class="evo-label">成熟</span>
-      </div>
-    </div>
-  </section>
-  <section class="pet-actions">
-    <button class="action-btn"><span class="action-icon">🍖</span>喂食</button>
-    <button class="action-btn"><span class="action-icon">🎾</span>玩耍</button>
-    <button class="action-btn"><span class="action-icon">💤</span>休息</button>
-    <button class="action-btn"><span class="action-icon">✨</span>进化</button>
-  </section>
+  </div>
+
+  <!-- Page dots -->
+  <div class="page-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
 </main>
+
 <nav class="dock">
-  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-label">主页</span></a>
-  <a href="hatch.html" class="dock-item"><span class="dock-icon">🥚</span><span class="dock-label">孵蛋</span></a>
-  <a href="forum.html" class="dock-item"><span class="dock-icon">💬</span><span class="dock-label">社区</span></a>
-  <a href="settings.html" class="dock-item"><span class="dock-icon">⚙️</span><span class="dock-label">设置</span></a>
+  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-dot"></span><span class="dock-label">Home</span></a>
+  <a href="pet.html" class="dock-item active"><span class="dock-icon">🐾</span><span class="dock-dot"></span><span class="dock-label">Pet</span></a>
+  <a href="shop.html" class="dock-item"><span class="dock-icon">🛍️</span><span class="dock-dot"></span><span class="dock-label">Shop</span></a>
+  <a href="bag.html" class="dock-item"><span class="dock-icon">👜</span><span class="dock-dot"></span><span class="dock-label">Bag</span></a>
+  <a href="mine.html" class="dock-item"><span class="dock-icon">😊</span><span class="dock-dot"></span><span class="dock-label">Mine</span></a>
 </nav>
+
 <script src="js/theme.js"></script>
 </body>
 </html>

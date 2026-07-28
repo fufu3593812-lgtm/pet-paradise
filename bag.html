@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bag - Dot Diary</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/bag.css">
+</head>
+<body data-theme="pink">
+
+<div class="dots-bg"></div>
+
+<header class="page-bar">
+  <button class="back-btn" onclick="history.back()">←</button>
+  <div class="page-title">• Bag •</div>
+  <button class="page-action"></button>
+</header>
+
+<div class="wave-divider top"></div>
+
+<main class="bag-main">
+
+  <!-- Category tabs -->
+  <div class="bag-tabs">
+    <button class="bag-tab active"><span class="tab-dot"></span>All</button>
+    <button class="bag-tab"><span class="tab-dot"></span>Food</button>
+    <button class="bag-tab"><span class="tab-dot"></span>Item</button>
+    <button class="bag-tab"><span class="tab-dot"></span>Dress</button>
+  </div>
+
+  <!-- Item grid -->
+  <div class="bag-grid">
+    <div class="bag-item">
+      <div class="bag-item-img">🍖</div>
+      <span class="bag-item-count">x12</span>
+      <span class="bag-item-name">Dog Food</span>
+    </div>
+    <div class="bag-item">
+      <div class="bag-item-img">🥛</div>
+      <span class="bag-item-count">x8</span>
+      <span class="bag-item-name">Milk</span>
+    </div>
+    <div class="bag-item">
+      <div class="bag-item-img">⚽</div>
+      <span class="bag-item-count">x5</span>
+      <span class="bag-item-name">Ball</span>
+    </div>
+    <div class="bag-item">
+      <div class="bag-item-img">🪥</div>
+      <span class="bag-item-count">x7</span>
+      <span class="bag-item-name">Brush</span>
+    </div>
+    <div class="bag-item">
+      <div class="bag-item-img">🧴</div>
+      <span class="bag-item-count">x6</span>
+      <span class="bag-item-name">Shampoo</span>
+    </div>
+    <div class="bag-item">
+      <div class="bag-item-img">🎀</div>
+      <span class="bag-item-count">x9</span>
+      <span class="bag-item-name">Ribbon</span>
+    </div>
+  </div>
+
+</main>
+
+<nav class="dock">
+  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-dot"></span><span class="dock-label">Home</span></a>
+  <a href="pet.html" class="dock-item"><span class="dock-icon">🐾</span><span class="dock-dot"></span><span class="dock-label">Pet</span></a>
+  <a href="shop.html" class="dock-item"><span class="dock-icon">🛍️</span><span class="dock-dot"></span><span class="dock-label">Shop</span></a>
+  <a href="bag.html" class="dock-item active"><span class="dock-icon">👜</span><span class="dock-dot"></span><span class="dock-label">Bag</span></a>
+  <a href="mine.html" class="dock-item"><span class="dock-icon">😊</span><span class="dock-dot"></span><span class="dock-label">Mine</span></a>
+</nav>
+
+<script src="js/theme.js"></script>
+</body>
+</html>

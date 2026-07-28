@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Diary - Dot Diary</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/diary.css">
+</head>
+<body data-theme="pink">
+
+<div class="dots-bg"></div>
+
+<header class="page-bar">
+  <button class="back-btn" onclick="history.back()">←</button>
+  <div class="page-title">• Diary •</div>
+  <button class="page-action">⋯</button>
+</header>
+
+<div class="wave-divider top"></div>
+
+<main class="diary-main">
+
+  <div class="diary-date">
+    <span class="diary-date-dot"></span>Today
+  </div>
+
+  <!-- Pet message -->
+  <div class="chat-row pet">
+    <div class="chat-avatar">🐩</div>
+    <div class="chat-bubble pet">今天很开心～<br>主人陪我玩了好多！</div>
+    <span class="chat-time">10:30</span>
+  </div>
+
+  <!-- User message -->
+  <div class="chat-row user">
+    <div class="chat-bubble user">我也很开心呀～<br>我们永远在一起吧！</div>
+    <span class="chat-time">10:31</span>
+  </div>
+
+  <!-- Pet message -->
+  <div class="chat-row pet">
+    <div class="chat-avatar">🐩</div>
+    <div class="chat-bubble pet">汪汪！（开心）</div>
+    <span class="chat-time">10:32</span>
+  </div>
+
+</main>
+
+<!-- Input bar -->
+<div class="chat-input-bar">
+  <input type="text" class="chat-input" placeholder="说点什么吧...">
+  <button class="chat-send">➤</button>
+</div>
+
+<script src="js/theme.js"></script>
+</body>
+</html>

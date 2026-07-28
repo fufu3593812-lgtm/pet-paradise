@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Theme - Dot Diary</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/setting.css">
+</head>
+<body data-theme="pink">
+
+<div class="dots-bg"></div>
+
+<!-- Top bar -->
+<header class="page-bar">
+  <button class="back-btn" onclick="history.back()">←</button>
+  <div class="page-title">• Theme •</div>
+  <button class="page-action">⋯</button>
+</header>
+
+<div class="wave-divider top"></div>
+
+<main class="setting-main">
+
+  <!-- Theme color picker -->
+  <section class="theme-section">
+    <div class="theme-grid">
+      <button class="theme-dot pink active" data-theme="pink" aria-label="Pink">
+        <span class="dot-check">✓</span>
+      </button>
+      <button class="theme-dot blue" data-theme="blue" aria-label="Blue">
+        <span class="dot-check">✓</span>
+      </button>
+      <button class="theme-dot mint" data-theme="mint" aria-label="Mint">
+        <span class="dot-check">✓</span>
+      </button>
+      <button class="theme-dot black" data-theme="black" aria-label="Black">
+        <span class="dot-check">✓</span>
+      </button>
+      <button class="theme-dot red" data-theme="red" aria-label="Red">
+        <span class="dot-check">✓</span>
+      </button>
+      <button class="theme-dot purple" data-theme="purple" aria-label="Purple">
+        <span class="dot-check">✓</span>
+      </button>
+    </div>
+    <div class="theme-labels">
+      <span>Pink</span><span>Blue</span><span>Mint</span>
+      <span>Black</span><span>Red</span><span>Purple</span>
+    </div>
+  </section>
+
+  <!-- Font size -->
+  <section class="setting-row">
+    <span class="setting-label">Font Size</span>
+    <div class="font-slider">
+      <span class="font-sm">A</span>
+      <input type="range" min="12" max="18" value="14" class="slider" id="fontSlider">
+      <span class="font-lg">A</span>
+    </div>
+  </section>
+
+  <!-- Sound -->
+  <section class="setting-row">
+    <span class="setting-label">Sound</span>
+    <label class="toggle">
+      <input type="checkbox" checked id="soundToggle">
+      <span class="toggle-track"></span>
+    </label>
+  </section>
+
+</main>
+
+<nav class="dock">
+  <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span class="dock-dot"></span><span class="dock-label">Home</span></a>
+  <a href="pet.html" class="dock-item"><span class="dock-icon">🐾</span><span class="dock-dot"></span><span class="dock-label">Pet</span></a>
+  <a href="shop.html" class="dock-item"><span class="dock-icon">🛍️</span><span class="dock-dot"></span><span class="dock-label">Shop</span></a>
+  <a href="bag.html" class="dock-item"><span class="dock-icon">👜</span><span class="dock-dot"></span><span class="dock-label">Bag</span></a>
+  <a href="mine.html" class="dock-item"><span class="dock-icon">😊</span><span class="dock-dot"></span><span class="dock-label">Mine</span></a>
+</nav>
+
+<script src="js/theme.js"></script>
+<script src="js/setting.js"></script>
+</body>
+</html>

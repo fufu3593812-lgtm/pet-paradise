@@ -1,0 +1,341 @@
+/* === Dot Diary - Base & Theme System === */
+
+/* --- Pink (default) --- */
+:root, [data-theme="pink"] {
+  --bg: #FFE8EE;
+  --bg-dot: rgba(255, 255, 255, 0.55);
+  --card: #FFFFFF;
+  --card-border: rgba(255, 180, 190, 0.3);
+  --text: #5A3040;
+  --text-sub: #A07080;
+  --accent: #FF7B9A;
+  --accent-light: #FFF0F3;
+  --accent-soft: #FFD0DA;
+  --accent-dark: #E8507A;
+  --bar-bg: #FFE0E8;
+  --bar-fill: #FF8DAA;
+  --shadow: rgba(255, 120, 150, 0.12);
+  --radius: 20px;
+  --radius-sm: 14px;
+  --radius-xs: 10px;
+  --dock-bg: rgba(255, 255, 255, 0.95);
+  --wave-color: #FFFFFF;
+  --dot-size: 10px;
+  --dot-gap: 32px;
+}
+
+/* --- Blue --- */
+[data-theme="blue"] {
+  --bg: #E0F0FF;
+  --bg-dot: rgba(255, 255, 255, 0.55);
+  --accent: #6AB4F0;
+  --accent-light: #EDF7FF;
+  --accent-soft: #C0DFFF;
+  --accent-dark: #3A8AD0;
+  --bar-bg: #D0E8FF;
+  --bar-fill: #6AB4F0;
+  --shadow: rgba(100, 170, 240, 0.12);
+  --dock-bg: rgba(255, 255, 255, 0.95);
+  --wave-color: #FFFFFF;
+  --card-border: rgba(100, 170, 240, 0.2);
+  --text: #2A3A50;
+  --text-sub: #6088A8;
+}
+
+/* --- Mint --- */
+[data-theme="mint"] {
+  --bg: #E0FFF4;
+  --bg-dot: rgba(255, 255, 255, 0.55);
+  --accent: #5ECEAD;
+  --accent-light: #EDFFF8;
+  --accent-soft: #B0F0DA;
+  --accent-dark: #38A888;
+  --bar-bg: #C8F5E8;
+  --bar-fill: #5ECEAD;
+  --shadow: rgba(80, 200, 170, 0.12);
+  --dock-bg: rgba(255, 255, 255, 0.95);
+  --wave-color: #FFFFFF;
+  --card-border: rgba(80, 200, 170, 0.2);
+  --text: #1A3A30;
+  --text-sub: #508878;
+}
+
+/* --- Black --- */
+[data-theme="black"] {
+  --bg: #2A2A2A;
+  --bg-dot: rgba(255, 255, 255, 0.08);
+  --card: #3A3A3A;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #AAAAAA;
+  --accent-light: #3A3A3A;
+  --accent-soft: #4A4A4A;
+  --accent-dark: #DDDDDD;
+  --bar-bg: #4A4A4A;
+  --bar-fill: #AAAAAA;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --dock-bg: rgba(42, 42, 42, 0.95);
+  --wave-color: #3A3A3A;
+  --text: #EEEEEE;
+  --text-sub: #999999;
+}
+
+/* --- Red --- */
+[data-theme="red"] {
+  --bg: #FFE0E0;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #FF5A5A;
+  --accent-light: #FFF0F0;
+  --accent-soft: #FFBABA;
+  --accent-dark: #D83030;
+  --bar-bg: #FFD0D0;
+  --bar-fill: #FF5A5A;
+  --shadow: rgba(255, 80, 80, 0.12);
+  --dock-bg: rgba(255, 255, 255, 0.95);
+  --wave-color: #FFFFFF;
+  --card-border: rgba(255, 80, 80, 0.15);
+  --text: #4A2020;
+  --text-sub: #A06060;
+}
+
+/* --- Purple --- */
+[data-theme="purple"] {
+  --bg: #F0E0FF;
+  --bg-dot: rgba(255, 255, 255, 0.5);
+  --accent: #B07AE8;
+  --accent-light: #F8F0FF;
+  --accent-soft: #DCC0FF;
+  --accent-dark: #8A50C8;
+  --bar-bg: #E8D0FF;
+  --bar-fill: #B07AE8;
+  --shadow: rgba(160, 100, 220, 0.12);
+  --dock-bg: rgba(255, 255, 255, 0.95);
+  --wave-color: #FFFFFF;
+  --card-border: rgba(160, 100, 220, 0.15);
+  --text: #3A2050;
+  --text-sub: #8060A0;
+}
+
+/* === Reset === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  font-family: -apple-system, 'Pretendard', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  color: var(--text);
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Polka Dots Background === */
+.dots-bg {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--bg-dot) var(--dot-size), transparent var(--dot-size));
+  background-size: var(--dot-gap) var(--dot-gap);
+  background-position: 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Wave Divider === */
+.wave-divider {
+  position: relative;
+  z-index: 2;
+  height: 20px;
+  background: var(--wave-color);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,40 C50,0 100,0 150,40 C200,0 250,0 300,40 C350,0 400,0 450,40 C500,0 550,0 600,40 C650,0 700,0 750,40 C800,0 850,0 900,40 C950,0 1000,0 1050,40 C1100,0 1150,0 1200,40 L1200,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0,40 C50,0 100,0 150,40 C200,0 250,0 300,40 C350,0 400,0 450,40 C500,0 550,0 600,40 C650,0 700,0 750,40 C800,0 850,0 900,40 C950,0 1000,0 1050,40 C1100,0 1150,0 1200,40 L1200,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.wave-divider.top {
+  transform: scaleY(-1);
+  margin-top: -1px;
+}
+
+.wave-divider.bottom {
+  margin-bottom: -1px;
+}
+
+/* === Top Bar === */
+.top-bar {
+  position: sticky;
+  top: 0;
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  z-index: 100;
+}
+
+.menu-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.menu-btn:active { background: var(--accent-light); }
+
+.top-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  letter-spacing: 0.5px;
+}
+
+.top-currency {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 5px 12px;
+  border-radius: 16px;
+}
+
+/* === Bottom Dock === */
+.dock {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  height: 70px;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--dock-bg);
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  color: var(--text-sub);
+  transition: color 0.2s;
+  padding: 6px 12px;
+  position: relative;
+}
+
+.dock-item.active { color: var(--accent-dark); }
+.dock-icon { font-size: 22px; }
+.dock-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: transparent;
+}
+.dock-item.active .dock-dot { background: var(--accent); }
+.dock-label { font-size: 10px; font-weight: 500; }
+
+/* === Common Components === */
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border: 1.5px solid var(--card-border);
+  border-radius: 28px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-pill:active { transform: scale(0.95); background: var(--accent-light); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 28px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn-primary:active { transform: scale(0.95); }
+
+/* === Page title bar (sub pages) === */
+.page-bar {
+  position: sticky;
+  top: 0;
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  z-index: 100;
+}
+
+.page-bar .back-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-bar .page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.page-bar .page-action {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--text);
+  cursor: pointer;
+}
